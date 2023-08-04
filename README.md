@@ -40,6 +40,11 @@ cd build/native/
 
 cmake ../..
 cmake --build .
+
+remove splash Juce
+juce/modules/juce_gui_basics/misc/juce_JUCESplashScreen.cpp
+ #define JUCE_DISPLAY_SPLASH_SCREEN 0
+ #define JUCE_USE_DARK_SPLASH_SCREEN 0
 ```
 
 At this point, thanks to JUCE's helpful CMake API, you should have local plugin binaries built and copied into the correct audio plugin directories on your machine. You should now be able to open your favorite plugin host and see your new plugins.
